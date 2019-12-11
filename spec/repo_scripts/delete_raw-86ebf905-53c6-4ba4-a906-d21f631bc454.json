@@ -1,0 +1,5 @@
+{
+  "name": "delete_raw-86ebf905-53c6-4ba4-a906-d21f631bc454",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.repository.manager.RepositoryManager; def manager = container.lookup(RepositoryManager.class.getName());manager.delete('raw-86ebf905-53c6-4ba4-a906-d21f631bc454');"
+}

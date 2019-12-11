@@ -1,0 +1,5 @@
+{
+  "name": "create_raw-86ebf905-53c6-4ba4-a906-d21f631bc454",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager; import org.sonatype.nexus.repository.storage.WritePolicy; configuration = repository.createHosted('raw-86ebf905-53c6-4ba4-a906-d21f631bc454', 'raw-hosted', BlobStoreManager.DEFAULT_BLOBSTORE_NAME, WritePolicy.ALLOW, true); repository.createRepository(configuration); "
+}

@@ -1,0 +1,5 @@
+{
+  "name": "create_maven2-48dd4991-bc49-45ce-8014-e32b7d6bb7c4",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager; import org.sonatype.nexus.repository.storage.WritePolicy; import org.sonatype.nexus.repository.maven.VersionPolicy; import org.sonatype.nexus.repository.maven.LayoutPolicy; configuration = repository.createHosted('maven2-48dd4991-bc49-45ce-8014-e32b7d6bb7c4', 'maven2-hosted', BlobStoreManager.DEFAULT_BLOBSTORE_NAME, WritePolicy.ALLOW, true); configuration.attributes.maven = repository.configureMaven(VersionPolicy.RELEASE, LayoutPolicy.STRICT); repository.createRepository(configuration); "
+}

@@ -1,0 +1,5 @@
+{
+  "name": "create_rubygems-c68c3075-aac2-4b32-a92e-94f2e3edc7c1",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager; import org.sonatype.nexus.repository.storage.WritePolicy; configuration = repository.createHosted('rubygems-c68c3075-aac2-4b32-a92e-94f2e3edc7c1', 'rubygems-hosted', BlobStoreManager.DEFAULT_BLOBSTORE_NAME, WritePolicy.ALLOW, true); repository.createRepository(configuration);"
+}

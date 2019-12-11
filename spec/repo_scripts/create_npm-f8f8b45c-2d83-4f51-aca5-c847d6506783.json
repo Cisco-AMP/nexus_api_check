@@ -1,0 +1,5 @@
+{
+  "name": "create_npm-f8f8b45c-2d83-4f51-aca5-c847d6506783",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager; import org.sonatype.nexus.repository.storage.WritePolicy; configuration = repository.createHosted('npm-f8f8b45c-2d83-4f51-aca5-c847d6506783', 'npm-hosted', BlobStoreManager.DEFAULT_BLOBSTORE_NAME, WritePolicy.ALLOW, true); repository.createRepository(configuration); "
+}

@@ -1,0 +1,5 @@
+{
+  "name": "create_pypi-bbc17c22-7a61-434c-80ff-6458b0527c22",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager; import org.sonatype.nexus.repository.storage.WritePolicy; configuration = repository.createHosted('pypi-bbc17c22-7a61-434c-80ff-6458b0527c22', 'pypi-hosted', BlobStoreManager.DEFAULT_BLOBSTORE_NAME, WritePolicy.ALLOW, true); repository.createRepository(configuration); "
+}

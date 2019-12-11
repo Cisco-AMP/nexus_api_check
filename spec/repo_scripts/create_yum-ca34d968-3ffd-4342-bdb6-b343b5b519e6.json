@@ -1,0 +1,5 @@
+{
+  "name": "create_yum-ca34d968-3ffd-4342-bdb6-b343b5b519e6",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager; import org.sonatype.nexus.repository.storage.WritePolicy; configuration = repository.createHosted('yum-ca34d968-3ffd-4342-bdb6-b343b5b519e6', 'yum-hosted', BlobStoreManager.DEFAULT_BLOBSTORE_NAME, WritePolicy.ALLOW, true); configuration.attributes.yum = ['repodataDepth': 0] as Map; repository.createRepository(configuration); "
+}
