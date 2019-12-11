@@ -1,0 +1,5 @@
+{
+  "name": "delete_npm-f8f8b45c-2d83-4f51-aca5-c847d6506783",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.repository.manager.RepositoryManager; def manager = container.lookup(RepositoryManager.class.getName());manager.delete('npm-f8f8b45c-2d83-4f51-aca5-c847d6506783');"
+}

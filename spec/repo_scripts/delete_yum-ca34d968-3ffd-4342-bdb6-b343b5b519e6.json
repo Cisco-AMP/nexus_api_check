@@ -1,0 +1,5 @@
+{
+  "name": "delete_yum-ca34d968-3ffd-4342-bdb6-b343b5b519e6",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.repository.manager.RepositoryManager; def manager = container.lookup(RepositoryManager.class.getName());manager.delete('yum-ca34d968-3ffd-4342-bdb6-b343b5b519e6');"
+}

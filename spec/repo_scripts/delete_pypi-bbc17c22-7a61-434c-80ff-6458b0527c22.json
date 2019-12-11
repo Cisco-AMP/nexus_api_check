@@ -1,0 +1,5 @@
+{
+  "name": "delete_pypi-bbc17c22-7a61-434c-80ff-6458b0527c22",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.repository.manager.RepositoryManager; def manager = container.lookup(RepositoryManager.class.getName());manager.delete('pypi-bbc17c22-7a61-434c-80ff-6458b0527c22');"
+}

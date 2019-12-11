@@ -1,0 +1,5 @@
+{
+  "name": "delete_docker-02a34d4f-871c-4c5b-9eab-6269502f4827",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.repository.manager.RepositoryManager; def manager = container.lookup(RepositoryManager.class.getName());manager.delete('docker-02a34d4f-871c-4c5b-9eab-6269502f4827');"
+}

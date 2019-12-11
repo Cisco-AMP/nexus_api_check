@@ -1,0 +1,5 @@
+{
+  "name": "delete_rubygems-c68c3075-aac2-4b32-a92e-94f2e3edc7c1",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.repository.manager.RepositoryManager; def manager = container.lookup(RepositoryManager.class.getName());manager.delete('rubygems-c68c3075-aac2-4b32-a92e-94f2e3edc7c1');"
+}

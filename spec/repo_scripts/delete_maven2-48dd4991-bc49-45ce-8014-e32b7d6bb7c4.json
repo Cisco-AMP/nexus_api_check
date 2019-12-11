@@ -1,0 +1,5 @@
+{
+  "name": "delete_maven2-48dd4991-bc49-45ce-8014-e32b7d6bb7c4",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.repository.manager.RepositoryManager; def manager = container.lookup(RepositoryManager.class.getName());manager.delete('maven2-48dd4991-bc49-45ce-8014-e32b7d6bb7c4');"
+}
