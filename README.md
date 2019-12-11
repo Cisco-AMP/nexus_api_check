@@ -3,9 +3,9 @@
 Tests the API functionality of a Sonatype Nexus server.
 
 
-**CAUTION** These are *functional* tests which means they will be making actual changes to your Nexus server. The tests are designed to be sandboxed within their own repo and use UUIDs in order to reduce the chance of collisions with actual content, but it is **highly** recommended that you have a backup before running these!
+**CAUTION!** These are *functional* tests which means they will be making *actual changes* to your Nexus server. The tests are designed to be sandboxed within their own repositories and use UUIDs in order to reduce the chance of collisions with actual content, but it is **highly** recommended that you have a backup before running these!
 
-If you'd like to take extra care, you can create a separate blob store specifically for testing and change the `DEFAULT_BLOBSTORE_NAME` in all the scripts within `spec/repo_scripts/`.
+If you'd like to take extra care, you can create a separate blob store specifically for testing and change the `DEFAULT_BLOBSTORE_NAME` in all the creation scripts within `spec/repo_scripts/`.
 
 
 ## Nexus Versions Supported
@@ -22,4 +22,4 @@ Title | Value
 
 
 ## Running the Tests
-`bundle exec rspec`
+`script/test`
