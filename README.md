@@ -18,7 +18,7 @@ Title | Value
 
 
 ## Setup
-`bundle install`
+`script/setup`
 
 
 ## Running the Tests
