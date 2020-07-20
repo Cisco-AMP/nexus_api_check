@@ -8,20 +8,8 @@ RSpec.shared_context 'reset Nexus state' do
       api.delete_tag(name: tag) if tag_exists?
     end
 
-    it 'by uploading a delete repository script' do
-      if nexus_contains?(:list_repositories, repository)
-        api.upload_script(filename: File.join(SCRIPTS_LOCATION, delete + '.json')) unless script_in_nexus?(delete)
-      end
-    end
-
-    it 'by running a delete repository script' do
-      api.run_script(name: delete) if nexus_contains?(:list_repositories, repository)
-    end
-
-    it 'by deleting all test scripts' do
-      [create, delete].each do |script|
-        api.delete_script(name: script) if script_in_nexus?(script)
-      end
+    it 'by deleting the repository if it exists' do
+      api.delete_repository(name: repository) if repo_in_nexus?(repository)
     end
   end
 end
