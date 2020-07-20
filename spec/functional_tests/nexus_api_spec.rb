@@ -14,6 +14,10 @@ RSpec.describe NexusAPI do
       let(:filesize) { 930 }
       let(:tag) { '1ce9f7580c78470d95992a45bfb020e5' }
 
+      def create_repository
+        api.create_repository_maven_hosted(name: repository)
+      end
+
       def upload
         api.upload_maven_component(
           filename: File.join(TEST_ASSETS_LOCATION, filename),
@@ -44,6 +48,10 @@ RSpec.describe NexusAPI do
       let(:filesize) { 365 }
       let(:tag) { '5c828ef441fe44eb84309921a7b1f55b' }
 
+      def create_repository
+        api.create_repository_npm_hosted(name: repository)
+      end
+
       def upload
         api.upload_npm_component(
           filename: File.join(TEST_ASSETS_LOCATION, filename),
@@ -70,6 +78,10 @@ RSpec.describe NexusAPI do
       let(:sha1) { '0043639dfa1538d07d4533c06e843fb4a723baff' }
       let(:filesize) { 1781 }
       let(:tag) { '51c15614bee4446f9f39113814df15b5' }
+
+      def create_repository
+        api.create_repository_pypi_hosted(name: repository)
+      end
 
       def upload
         api.upload_pypi_component(
@@ -99,6 +111,10 @@ RSpec.describe NexusAPI do
       let(:filesize) { 41550 }
       let(:tag) { '5a8120fdda3e4e5d965bf07e57328323' }
 
+      def create_repository
+        api.create_repository_raw_hosted(name: repository)
+      end
+
       def upload
         api.upload_raw_component(
           filename: File.join(TEST_ASSETS_LOCATION, filename),
@@ -127,6 +143,10 @@ RSpec.describe NexusAPI do
       let(:filesize) { 6144 }
       let(:tag) { 'c89b3d46e3a645e1a9e48aba74707a51' }
 
+      def create_repository
+        api.create_repository_rubygems_hosted(name: repository)
+      end
+
       def upload
         api.upload_rubygems_component(
           filename: File.join(TEST_ASSETS_LOCATION, filename),
@@ -154,6 +174,10 @@ RSpec.describe NexusAPI do
       let(:sha1) { '6cf29d8b427e2a904b2f581e1db267d7a8c7069f' }
       let(:filesize) { 1884 }
       let(:tag) { 'a2b2f26d0bb84a518074dfbafe9be04e' }
+
+      def create_repository
+        api.create_repository_yum_hosted(name: repository, depth: 0)
+      end
 
       def upload
         api.upload_yum_component(

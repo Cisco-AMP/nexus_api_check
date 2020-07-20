@@ -4,28 +4,13 @@ require 'functional_tests/reset_nexus'
 
 include HelperMethods
 
-SCRIPTS_LOCATION = File.join(File.dirname(__dir__), 'repo_scripts/').freeze
-
 RSpec.shared_examples 'a Nexus API and' do
   include_context 'reset Nexus state'
-  
-  let(:create) { 'create_' + repository }
-  let(:delete) { 'delete_' + repository }
 
-  context 'can upload a script' do
-    it 'to create a repository' do
-      upload_script(create)
-    end
-
-    it 'to delete a repository' do
-      upload_script(delete)
-    end
-  end
-
-  context 'can create a new repo' do
-    it 'by running a script' do
+  context 'can create' do
+    it 'a new repo' do
       expect(repo_in_nexus?(repository)).to be_falsey
-      expect(api.run_script(name: create)).to be(true)
+      expect(create_repository).to be(true)
       expect(repo_in_nexus?(repository)).to be_truthy
     end
   end
@@ -87,21 +72,11 @@ RSpec.shared_examples 'a Nexus API and' do
     end
   end
 
-  context 'can delete a repo' do
-    it 'by running a script' do
+  context 'can delete' do
+    it 'an existing repo' do
       expect(repo_in_nexus?(repository)).to be_truthy
-      expect(api.run_script(name: delete)).to be(true)
+      expect(api.delete_repository(name: repository)).to be(true)
       expect(repo_in_nexus?(repository)).to be_falsey
-    end
-  end
-
-  context 'can delete a script' do
-    it 'to create a repository' do
-      delete_script(create)
-    end
-
-    it 'to delete a repository' do
-      delete_script(delete)
     end
   end
 end
