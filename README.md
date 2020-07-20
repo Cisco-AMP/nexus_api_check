@@ -20,4 +20,4 @@ Title | Value
 
 
 ## Running the Tests
-`bundle exec rspec`
+`script/test`
